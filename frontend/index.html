@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropGuard | Plant Disease Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Crop<span>Guard</span></div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#detect">Detect Disease</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+        <div class="badge">AI-POWERED CROP HEALTH</div>
+
+        <h1>
+            Protect Your Crops<br>
+            With <span>Intelligent AI</span>
+        </h1>
+
+        <p>
+            Upload a photo of a plant leaf and let CropGuard
+            analyze it using machine learning to identify
+            potential diseases.
+        </p>
+
+        <a href="#detect" class="primary-btn">
+            Detect Plant Disease →
+        </a>
+
+        <div class="stats">
+            <div>
+                <strong>AI</strong>
+                <small>Powered Detection</small>
+            </div>
+
+            <div>
+                <strong>Fast</strong>
+                <small>Image Analysis</small>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <small>Crop Protection</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="leaf-card">
+        <div class="circle"></div>
+        <div class="leaf-symbol">🌿</div>
+        <div class="floating-card">
+            <b>CropGuard AI</b>
+            <span>Ready to analyze</span>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="detect" class="detect-section">
+
+    <div class="section-heading">
+        <div class="badge">AI DIAGNOSIS</div>
+        <h2>Analyze Your Plant</h2>
+        <p>Upload a clear image of the affected leaf.</p>
+    </div>
+
+    <div class="upload-box">
+
+        <input type="file" id="imageInput" accept="image/*" hidden>
+
+        <div id="uploadContent">
+            <div class="upload-icon">↑</div>
+            <h3>Upload Plant Image</h3>
+            <p>PNG, JPG or JPEG</p>
+
+            <button onclick="document.getElementById('imageInput').click()">
+                Choose Image
+            </button>
+        </div>
+
+        <img id="preview" />
+
+    </div>
+
+    <button id="analyzeBtn" class="analyze-btn">
+        Analyze With CropGuard AI
+    </button>
+
+    <div id="result" class="result"></div>
+
+</section>
+
+
+<section id="about" class="about">
+
+    <div class="badge">ABOUT CROPGUARD</div>
+
+    <h2>Smarter Farming Starts With Early Detection.</h2>
+
+    <p>
+        CropGuard combines computer vision and machine learning
+        to help identify plant diseases from leaf images.
+    </p>
+
+</section>
+
+
+<footer>
+    <div class="logo">Crop<span>Guard</span></div>
+    <p>AI-powered plant disease detection.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
