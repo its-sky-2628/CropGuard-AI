@@ -774,3 +774,102 @@ elif page == "ℹ️ About":
 
     CropGuard AI demonstrates an end-to-end architecture for AI-powered crop health monitoring.
     """)
+
+# ============================================================
+# VISIBILITY FIX
+# ============================================================
+
+st.markdown("""
+<style>
+.stApp {
+    background: #f4fff4 !important;
+    color: #1f2937 !important;
+}
+
+.stApp p,
+.stApp span,
+.stApp label,
+.stApp li {
+    color: #1f2937 !important;
+}
+
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li,
+[data-testid="stMarkdownContainer"] span {
+    color: #1f2937 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #14532d !important;
+}
+
+section[data-testid="stSidebar"] {
+    background: #ffffff !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #1f2937 !important;
+}
+
+input,
+textarea {
+    background: #ffffff !important;
+    color: #111827 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6b7280 !important;
+}
+
+[data-testid="stFileUploader"] {
+    background: #ffffff !important;
+}
+
+[data-testid="stFileUploader"] * {
+    color: #1f2937 !important;
+}
+
+.stButton > button {
+    background: #166534 !important;
+    color: #ffffff !important;
+}
+
+[data-testid="stMetric"] {
+    background: #ffffff !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #4b5563 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #14532d !important;
+}
+
+.card {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+.card h3 {
+    color: #14532d !important;
+}
+
+.main-title {
+    color: #14532d !important;
+}
+
+.subtitle {
+    color: #4b5563 !important;
+}
+
+[data-testid="stAlert"] * {
+    color: #1f2937 !important;
+}
+
+button[data-baseweb="tab"] {
+    color: #374151 !important;
+}
+</style>
+""", unsafe_allow_html=True)
