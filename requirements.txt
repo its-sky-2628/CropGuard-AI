@@ -5,3 +5,9 @@ tensorflow
 numpy
 pillow
 scikit-learn
+streamlit
+pandas
+numpy
+Pillow
+plotly
+opencv-python-headless
