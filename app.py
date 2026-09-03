@@ -14,8 +14,8 @@ import cv2
 # ============================================================
 
 st.set_page_config(
-    page_title="CropGuard AI",
-    page_icon="🌾",
+    page_title="CropGuard",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -337,16 +337,16 @@ def analyze_image(image):
 # SIDEBAR
 # ============================================================
 
-st.sidebar.markdown("# 🌾 CropGuard AI")
+st.sidebar.markdown("#  CropGuard")
 
 page = st.sidebar.radio(
     "Navigation",
     [
-        "🏠 Dashboard",
+        " Dashboard",
         "🔍 Detect Disease",
-        "📊 Analytics",
+        " Analytics",
         "📜 History",
-        "ℹ️ About"
+        " About"
     ]
 )
 
@@ -365,10 +365,10 @@ st.sidebar.info(
 # DASHBOARD
 # ============================================================
 
-if page == "🏠 Dashboard":
+if page == " Dashboard":
 
     st.markdown(
-        '<div class="main-title">🌾 CropGuard AI</div>',
+        '<div class="main-title"> CropGuard</div>',
         unsafe_allow_html=True
     )
 
@@ -450,7 +450,7 @@ elif page == "🔍 Detect Disease":
     with col1:
 
         crop_name = st.text_input(
-            "🌱 Crop Name (Optional)",
+            " Crop Name (Optional)",
             placeholder="Example: Tomato, Wheat, Potato"
         )
 
@@ -489,7 +489,7 @@ elif page == "🔍 Detect Disease":
 
         if st.button("🚀 Analyze Crop Image", use_container_width=True):
 
-            with st.spinner("🤖 CropGuard AI is analyzing the image..."):
+            with st.spinner("🤖 CropGuard is analyzing the image..."):
 
                 result = analyze_image(image)
 
@@ -549,7 +549,7 @@ elif page == "🔍 Detect Disease":
                 st.markdown(
                     """
                     <div class="risk-medium">
-                    <h3>⚠️ MEDIUM RISK</h3>
+                    <h3> MEDIUM RISK</h3>
                     Regular monitoring and preventive action recommended.
                     </div>
                     """,
@@ -561,14 +561,14 @@ elif page == "🔍 Detect Disease":
                 st.markdown(
                     """
                     <div class="risk-low">
-                    <h3>✅ LOW RISK</h3>
+                    <h3> LOW RISK</h3>
                     Crop appears stable. Continue regular monitoring.
                     </div>
                     """,
                     unsafe_allow_html=True
                 )
 
-            st.markdown("### 📋 Disease / Pest Information")
+            st.markdown("###  Disease / Pest Information")
 
             st.write(result["description"])
 
@@ -596,7 +596,7 @@ elif page == "🔍 Detect Disease":
                     st.write("•", prevention)
 
             st.warning(
-                "⚠️ Prototype output is intended for preliminary screening. Confirm serious disease or pesticide decisions with a qualified agricultural expert."
+                " Prototype output is intended for preliminary screening. Confirm serious disease or pesticide decisions with a qualified agricultural expert."
             )
 
 
@@ -604,9 +604,9 @@ elif page == "🔍 Detect Disease":
 # ANALYTICS
 # ============================================================
 
-elif page == "📊 Analytics":
+elif page == " Analytics":
 
-    st.title("📊 Crop Health Analytics")
+    st.title(" Crop Health Analytics")
 
     if len(st.session_state.history) == 0:
 
@@ -670,7 +670,7 @@ elif page == "📊 Analytics":
                 use_container_width=True
             )
 
-        st.markdown("### 📈 AI Confidence")
+        st.markdown("###  AI Confidence")
 
         fig3 = px.line(
             df,
@@ -730,14 +730,14 @@ elif page == "📜 History":
 # ABOUT
 # ============================================================
 
-elif page == "ℹ️ About":
+elif page == " About":
 
-    st.title("ℹ️ About CropGuard AI")
+    st.title(" About CropGuard")
 
     st.markdown("""
-    ## 🌾 Early Detection & Management System
+    ##  Early Detection & Management System
 
-    CropGuard AI is an intelligent agriculture prototype designed to support farmers and agricultural professionals in identifying potential crop diseases and pest infestations at an early stage.
+    CropGuard is an intelligent agriculture prototype designed to support farmers and agricultural professionals in identifying potential crop diseases and pest infestations at an early stage.
 
     ### 🎯 Objective
 
@@ -772,7 +772,7 @@ elif page == "ℹ️ About":
 
     ### 👨‍💻 Prototype
 
-    CropGuard AI demonstrates an end-to-end architecture for AI-powered crop health monitoring.
+    CropGuard demonstrates an end-to-end architecture for AI-powered crop health monitoring.
     """)
 
 # ============================================================
